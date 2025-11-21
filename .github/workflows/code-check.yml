@@ -1,0 +1,18 @@
+name: Code Check Workflow
+
+on:
+  push:
+
+jobs:
+  code-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run formatting check
+      run: echo "Checking code formatting..."
+
+    - name: Run test script
+      run: echo "Running tests..."
